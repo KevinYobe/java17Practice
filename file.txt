@@ -1,0 +1,4 @@
+Java is lovely
+Python is great
+Even PHP works for some
+You just got to choose your pre-occupation.
