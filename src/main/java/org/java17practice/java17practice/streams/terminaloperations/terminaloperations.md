@@ -104,3 +104,6 @@ the Optional.
 
 **default List<T> toList()**
 - Accumulates the elements of this stream into a List.
+
+**boolean noneMatch(Predicate<? super T> predicate)**
+- Returns whether no elements of this stream match the provided predicate.
