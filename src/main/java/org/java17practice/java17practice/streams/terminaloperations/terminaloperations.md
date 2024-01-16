@@ -67,3 +67,40 @@ System.out.println(minEmpty.isPresent()); // false
 Since the stream is empty, the comparator is never called, and no value is present in
 the Optional.
 
+**Optional<T> findAny()**
+- Returns an Optional describing some element of the stream, or an empty Optional if the stream is empty.
+- Terminates on an infinite stream
+- It is not a reduction operation - simply returns any element in the Stream
+
+**Optional<T> findFirst()**
+- Returns an Optional describing the first element of this stream, or an empty Optional if the stream is empty.
+- Terminates on an infinite stream
+- It is not a reduction operation - simply returns any element in the Stream
+
+**void forEach(Consumer<? super T> action)**
+- Performs an action for each element of this stream.
+- Typically used for printing
+- It is a reduction 
+- For an infinite stream, it does not terminate
+
+**void forEachOrdered(Consumer<? super T> action)**
+- Performs an action for each element of this stream, in the encounter order of the stream if the stream has a defined encounter order.
+
+**Optional<T> reduce(BinaryOperator<T> accumulator)**
+- Performs a reduction on the elements of this stream, using an associative accumulation function, and returns an Optional describing the reduced value, if any.
+- Obviously, it is a reduction
+
+**T  reduce(T identity, BinaryOperator<T> accumulator)**
+- Performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value.
+
+**<U> U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)**
+- Performs a reduction on the elements of this stream, using the provided identity, accumulation and combining functions.
+
+**Object[] toArray()**
+- Returns an array containing the elements of this stream.
+
+**<A> A[] toArray(IntFunction<A[]> generator)**
+- Returns an array containing the elements of this stream, using the provided generator function to allocate the returned array, as well as any additional arrays that might be required for a partitioned execution or for resizing.
+
+**default List<T> toList()**
+- Accumulates the elements of this stream into a List.
