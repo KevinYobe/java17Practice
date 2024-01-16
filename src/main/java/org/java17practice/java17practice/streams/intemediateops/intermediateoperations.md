@@ -46,32 +46,32 @@
 
 
 **14. mapMultiToLong(BiConsumer<? super T,? super LongConsumer> mapper)**
-Returns a LongStream consisting of the results of replacing each element of this stream with multiple elements, specifically zero or more elements.
+- Returns a LongStream consisting of the results of replacing each element of this stream with multiple elements, specifically zero or more elements.
 
 
 **15. mapToDouble(ToDoubleFunction<? super T> mapper)**
-Returns a DoubleStream consisting of the results of applying the given function to the elements of this stream.
+- Returns a DoubleStream consisting of the results of applying the given function to the elements of this stream.
 
 **16. mapToInt(ToIntFunction<? super T> mapper)**
-Returns an IntStream consisting of the results of applying the given function to the elements of this stream.
+- Returns an IntStream consisting of the results of applying the given function to the elements of this stream.
 
 
 **17. mapToLong(ToLongFunction<? super T> mapper)**
-Returns a LongStream consisting of the results of applying the given function to the elements of this stream.
+- Returns a LongStream consisting of the results of applying the given function to the elements of this stream.
 
 
 **18 peek(Consumer<? super T> action)**
-Returns a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream.
+- Returns a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream.
 
 
 **19. skip(long n)**
-Returns a stream consisting of the remaining elements of this stream after discarding the first n elements of the stream.
+- Returns a stream consisting of the remaining elements of this stream after discarding the first n elements of the stream.
 
 **20. sorted()**
-Returns a stream consisting of the elements of this stream, sorted according to natural order.
+- Returns a stream consisting of the elements of this stream, sorted according to natural order.
 
 **21. sorted(Comparator<? super T> comparator)**
-Returns a stream consisting of the elements of this stream, sorted according to the provided Comparator.
+- Returns a stream consisting of the elements of this stream, sorted according to the provided Comparator.
 
 **22. takeWhile(Predicate<? super T> predicate)**
-Returns, if this stream is ordered, a stream consisting of the longest prefix of elements taken from this stream that match the given predicate.
+- Returns, if this stream is ordered, a stream consisting of the longest prefix of elements taken from this stream that match the given predicate.
