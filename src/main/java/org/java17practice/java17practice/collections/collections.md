@@ -27,3 +27,90 @@
 2. **LinkedList** fast insertion and deletion, but slower iteration
 3. **Stack** LIFO implementation. 
 
+### Factory Methods 
+ - There are 3 factory methods used to create list: 
+
+#### Arrays.asList(array)
+- Creates a list that is backed by the array. 
+- You can modify the elements in the list
+- You cannot remove/add elements to the list.
+
+#### List.of(E....)
+ - Create a list from a list of elements 
+ - You cannot modify, delete or add items to the list. 
+
+#### List.copyOf(Collection c)
+- Create a list from the provided collection.
+- You cannot modify, delete or add items to the list. 
+
+
+### Creating ArrayList
+- ArrayList has 3 public constructors that are used to create a list.
+`````java
+  var list1 = new ArrayList<String>();
+  var list2 = new ArrayList<String>(list1); //From another list
+  var list3 = new ArrayList<String>(10); //Pass a limit to the list
+``````
+
+### Common List Methods
+![img_3.png](img_3.png)
+
+### Creating LinkedList
+`````java
+var linked1 = new LinkedList<String>();
+var linked2 = new LinkedList<String>(linked1);
+``````
+### Linked List Methods
+LinkedList has the following additional methods:
+**void addFirst(E e)**
+ - Inserts the specified element at the front of this LinkedList if it is possible to do so immediately without violating capacity restrictions
+ - throws an IllegalStateException if no space is currently available
+ - if using a capacity restricted list, it is often better to use offerFirst()
+
+**addLast(E e)**
+- Inserts the specified element at the end of this LinkedList if it is possible to do so immediately without violating capacity restrictions
+- throws an IllegalStateException if no space is currently available
+- if using a capacity restricted list, it is often better to use offerLast()
+
+**boolean offer(E e)**
+- Inserts element at the tail(end) of the list, and returns true if the operation was successful. 
+
+
+**boolean offerFirst(E e)**
+- Inserts the specified element at the front of this deque unless it would violate capacity restrictions.
+- When using a capacity-restricted deque, this method is generally preferable to the addFirst(E) method, which can fail to insert an element only by throwing an exception.
+- Returns true is element was added to the queue, and false otherwise. 
+
+**boolean offerLast(E e)**
+- Inserts the specified element at the end of this deque unless it would violate capacity restrictions. 
+- When using a capacity-restricted deque, this method is generally preferable to the addLast(E) method, which can fail to insert an element only by throwing an exception.
+- Returns true is element was added to the queue, and false otherwise. 
+
+**E remove()**
+- Retrieves and removes the first element of this deque.
+- Throws an exception if the list is empty. 
+
+**E removeFirst()**
+- Retrieves and removes the first element of this deque. 
+- This method differs from pollFirst only in that it throws an exception if this LinkedList is empty.
+- Throws NoSuchElementException - if this list is empty
+
+**E removeLast()**
+- Retrieves and removes the last element of this deque. 
+- This method differs from pollLast only in that it throws an exception if this deque is empty.
+- Throws NoSuchElementException - if this list is empty
+
+**E pollFirst()**
+Retrieves and removes the first element of this deque, or returns null if this deque is empty.
+
+**E pollLast()**
+Retrieves and removes the first element of this deque, or returns null if this deque is empty.
+
+
+
+
+
+
+
+
+

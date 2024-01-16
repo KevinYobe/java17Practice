@@ -16,7 +16,7 @@ public class CreatingStreams {
         Double[] doubleNums = {1.1, 2.0, 3.5, 4.5, 990.1};
         Stream<Double> doubleNumbsStream = Arrays.stream(doubleNums);
                 doubleNumbsStream.forEach(System.out::println);
-        //Usinge the List.stream() method of Collections interface
+        //Using the List.stream() method of Collections interface
         List<String> list = List.of("Kevin ", "Praise ", "Adriel ", "Adriella " );
         Stream<String> stream = list.stream();
         stream.forEach(System.out::println);
@@ -53,6 +53,8 @@ public class CreatingStreams {
                 .limit(30)
                 .forEach(System.out::println);
 
-        Stream<Double> integerStream = Stream.generate(()->Math.random());
+        Stream<Double> integerStream = Stream.generate(Math::random)
+                .limit(100);
+        integerStream.forEach(System.out::println);
     }
 }

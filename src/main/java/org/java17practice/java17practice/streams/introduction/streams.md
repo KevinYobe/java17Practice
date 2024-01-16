@@ -11,7 +11,19 @@
 **3. Terminal Operation: Produce** a result. A stream can only be used once, so the stream is no longer valid after the terminal operation.
 - A stream does not store data. Rather, data is generated upfront, and as needed.
 - Streams, thus, are lazy evaluated. This means that data is only generated when needed, i.e. when there is a terminal operation in the stream. 
-- Lazy evaluation also means that Stream will stop processing the data at the earliest convinience. 
+- Computation on source data is only done when the terminal operation is initiated. No terminal operation = no computation
+- Lazy evaluation also means that Stream will stop processing the data at the earliest convenience. 
+
+## Streams and Concurrency
+
+- Unless the source was explicitly designed for concurrent modification (such as a ConcurrentHashMap), unpredictable or erroneous behavior may result from modifying the stream source while it is being queried
+
+## Collections vs Streams 
+- Collections and streams have some similarities but have different goals. 
+- Collections are concerned with efficient access and management of data elements
+- Streams provide a means to directly access their data elements.
+- Streams therefore are mainly concerned with the source and aggregate computational methods that wil be performed on the source
+
 
 ## Creating a Stream 
 
@@ -61,7 +73,16 @@ Stream<Double> doubleStream = Stream.of(10.5, 11.5);
 
 6. Using Stream.concat() method
 
-7. Using Stream.empty to create an empty Stream. 
+````java
+        Stream<Double> doubleStream1 = Stream.of(10.12, 11.5);
+        Stream<Double> doubleStream2 = Stream.of(10.5, 11.5);
+
+        Stream<Double> concatStreams = Stream.concat(doubleStream1, doubleStream2);
+````
+        
+        
+
+7. Using Stream.empty() to create an empty Stream. 
 
 
 ### Infinite Streams

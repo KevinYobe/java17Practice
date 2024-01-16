@@ -13,8 +13,12 @@ public class LinkedListTest {
         linkedList.addFirst("Mike");
         linkedList.addLast("Adrian");
         linkedList.add("Kuda");
+        linkedList.offerFirst("Maria");
+        linkedList.offerLast("Maria21");
+
+        linkedList.push("Kuda123");
         System.out.println(linkedList);
-        linkedList.removeFirst();
+        System.out.println(linkedList.pop());
         System.out.println(linkedList);
 
     }

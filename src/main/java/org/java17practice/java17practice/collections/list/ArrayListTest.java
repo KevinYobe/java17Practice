@@ -8,8 +8,9 @@ public class ArrayListTest {
         String [] names = {"Reagan", "Adrian ", "Lisa", "Adriel", "Nyasha"};
         List<String> cities = new ArrayList<>();
         List<String> list = Arrays.asList(names);
+        List<Integer> list2 = List.of(1,3,4,5);
         list.set(1, "Kuda");
         System.out.println(list);
-        Arrays.stream(names).forEach(System.out::println);
+        System.out.println(list2.getClass().getName());
     }
 }
